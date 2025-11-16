@@ -1,0 +1,100 @@
+:root {
+    --carbonool-light: #f5f5f5;
+    --carbonool-dark: #121212;
+    --carbonool-medium: #333333;
+    --carbonool-black: #000000;
+ --gradient-background: linear-gradient(135deg, #121212 54%, #000000 100%);
+}
+body{
+    background: #ffffff;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../image/padrao-de-fundo-de-blocos-de-pixel-de-parede-de-tijolos-vetoriais_384401-4680.avif);
+    background-repeat: round;
+    background-attachment: fixed;
+    position: relative;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: blur(2px);
+    backdrop-filter: blur(2px);
+    pointer-events: none;
+}
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    background: #121212;
+    color: #ffffff;
+    border-bottom:  2px solid #690707f3;
+    z-index: 1;
+}
+.panel{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.squarer{
+    width: 150px;
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #000000;
+    background: var(--carbonool-medium) ;
+    cursor: pointer;
+}
+.enemy{
+    background-color: var(--carbonool-black);
+    box-shadow: inset 0 0 30px #c91818;
+    cursor: pointer;
+  
+}
+.enemy{
+      background-image: url(../image/pngwing.com.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.7));
+}
+.life {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+.life img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+   filter: drop-shadow(2px 4px 6px rgba(243, 212, 212, 0.073));
+}
+.life img:not([src*="pngegg"]) {
+  filter: drop-shadow(0 0 8px rgba(255, 50, 50, 0.381));
+}
+
+
+
